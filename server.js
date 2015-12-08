@@ -21,7 +21,7 @@ Meteor.methods({
     if (r.device != 'spider') {
 
       // Get the IP address from the headers
-      ip = headers.methodClientIP(this);
+      ip = headers.methodClientIP(self);
 
       // Geo IP look up for the IP Address
       geo = geoip.lookup(ip);
